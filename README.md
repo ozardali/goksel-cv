@@ -1,0 +1,2 @@
+# gokselCV
+ goksel ozardali cv
