@@ -1,4 +1,3 @@
-
 body {
     --text-color: #444;
     --bkg-color: #fff;
@@ -10,12 +9,10 @@ body.dark-theme {
 }
 
 @media (prefers-color-scheme: dark) {
-
     body {
         --text-color: #cbd5e0;
         --bkg-color: #000;
     }
-
     body.light-theme {
         --text-color: #444;
         --bkg-color: #fff;
@@ -29,7 +26,6 @@ body {
     line-height: 2rem;
     font-size: 16px;
     font-weight: 500
-
 }
 
 h1, h2, i, p {
@@ -39,7 +35,6 @@ h1, h2, i, p {
 a:hover {
     color: var(--text-color);
 }
-
 
 img {
     border: 1px solid var(--text-color);
@@ -54,11 +49,29 @@ img {
     font-style: italic;
 }
 
-
 .line {
     border-top: 1px solid #cecece;
 }
 
 ul, li {
     list-style-type: none;
+}
+
+.wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+    10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
 }
